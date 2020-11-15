@@ -1,0 +1,10 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.main {
+  background-color: black; }
+  .main__header {
+    color: pink; }

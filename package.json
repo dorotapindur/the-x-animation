@@ -1,0 +1,23 @@
+{
+  "name": "the-x-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorotapindur/the-x-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorotapindur/the-x-animation/issues"
+  },
+  "homepage": "https://github.com/dorotapindur/the-x-animation#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

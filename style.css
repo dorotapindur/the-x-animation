@@ -1,10 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
+:root {
+  --background:  #252525;
+  --color: #fff;
+  --x: rgb(0, 185, 176); }
+
 .main {
-  background-color: black; }
+  background-color: var(--background);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px 10px; }
   .main__header {
-    color: pink; }
+    margin: 0;
+    color: var(--color);
+    text-align: center; }
+    .main__header--x {
+      color: var(--x);
+      display: inline-block;
+      animation: rotating-x 2s linear infinite;
+      font-size: 40px; }
+
+@keyframes rotating-x {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
+@-webkit-keyframes rotating-x {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }

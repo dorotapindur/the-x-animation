@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="the x icon turning into hamburger icon">
+    <meta name="description" content="an svg animation study">
     <title>the x animation</title>
     <link href="normalize.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -12,7 +12,7 @@
      <!-- Title -->
    <meta property="og:title" content="the x animation" />
    <!-- OPTIONAL description. 2-4 sentences. -->
-   <meta property="og:description" content="the x icon turning into hamburger icon" />
+   <meta property="og:description" content="an svg animation study" />
    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
    <meta property="og:url" content="" />
    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
@@ -23,6 +23,16 @@
 <body>
     <main class="main">
         <h1 class="main__header">the <span class="main__header--x">x</span> animation</h1>
+        <span class="main__description">svg animation study</span>
+        <button class="button" aria-label="menu" title="menu" onclick="this.classList.toggle('opened')">
+            <svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0 -244.08)" fill="none" stroke-linecap="round">
+                 <path class="line line-one" d="m12.282 270.54h29.075"/>
+                 <path class="line line-two" d="m12.254 280.88h27.771s1.9684 0.036 3.1002-0.37492c2.3496-0.85305 4.3248-3.1338 5.1535-5.5458 1.9215-5.5927 1.4836-12.622-1.438-17.735-0.62813-1.0993-1.8793-1.8461-3.0869-2.1303-1.0381-0.2443-2.1898 0.0173-3.1629 0.46253-0.7364 0.33688-1.8565 1.5942-1.8565 1.5942l-24.474 26.701"/>
+                 <path class="line line-three" d="m12.226 259.87h27.771s2.0352-0.036 3.1002 0.37492c2.3321 0.89981 4.3248 3.1338 5.1535 5.5458 1.9215 5.5927 1.4836 12.622-1.438 17.735-0.62813 1.0993-1.8793 1.8461-3.0869 2.1303-1.0381 0.2443-2.1898-0.0173-3.1629-0.46253-0.7364-0.33688-1.8565-1.5942-1.8565-1.5942l-24.474-26.701"/>
+                </g>
+               </svg>         
+        </button>
     </main>
 </body>
 

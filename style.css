@@ -123,11 +123,38 @@ html {
       color: var(--x);
       cursor: pointer; }
 
-.test {
+.card-container, .front, .back {
   width: 200px;
-  height: 100px;
-  transition: height 3s ease-out;
-  background-color: olive;
-  overflow: hidden; }
-  .test:hover {
-    height: 300px; }
+  height: 200px; }
+
+.card-container {
+  position: relative;
+  perspective: 200px;
+  margin: 50px auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.2;
+  cursor: pointer;
+  background: none;
+  border: none; }
+  .card-container:focus {
+    outline: none; }
+  .card-container:focus-visible {
+    outline: 2px solid var(--x); }
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 1s ease; }
+
+.back {
+  transform: rotateY(180deg); }
+
+.vertical .front {
+  transform: rotateY(-180deg); }
+
+.vertical .back {
+  transform: rotateY(0deg); }

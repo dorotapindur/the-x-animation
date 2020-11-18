@@ -24,7 +24,7 @@
     <main class="main">
         <h1 class="main__header">the <span class="main__header--x">x</span> animation</h1>
         <span class="main__description">svg animation study</span>
-        <button class="button" aria-label="menu" title="menu" onclick="this.classList.toggle('opened')">
+        <button class="button button--js" aria-label="menu" title="menu">
             <svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(0 -244.08)" fill="none" stroke-linecap="round">
                  <path class="line line-one" d="m12.282 270.54h29.075"/>
@@ -33,7 +33,18 @@
                 </g>
                </svg>         
         </button>
+        <div class="options options--js">
+            <p class="options__text">Choose animation type:</p>
+            <ul class="options__list">
+                <li class="options__item">horizontal</li>
+                <li class="options__item">vertical</li>
+                <li class="options__item">angle</li>
+                <li class="options__item">snake</li>
+            </ul>
+        </div>
     </main>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

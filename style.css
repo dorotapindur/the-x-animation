@@ -98,16 +98,16 @@ html {
     outline: 2px solid var(--x); }
 
 .options {
-  height: 400px;
+  height: auto;
   max-height: 0px;
   transition: max-height 0.5s ease-out;
   overflow: hidden;
-  width: 200px;
+  width: 100%;
   margin: 0 auto;
   color: var(--color);
   text-align: center; }
   .options--open {
-    max-height: 400px;
+    max-height: 1000px;
     transition: max-height 1s linear; }
   .options__text {
     width: max-content;
@@ -130,6 +130,81 @@ html {
       cursor: pointer; }
     .options__item:active {
       color: var(--active); }
+  .options__x-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto; }
+
+.horizontal {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 200px;
+  margin: 0 auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.2;
+  background: none;
+  border: none; }
+  .horizontal::before {
+    content: "horizontal"; }
+
+.horizontal__x, .horizontal__ham {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 1s ease; }
+
+.horizontal__x {
+  transform: rotateX(0deg); }
+
+.horizontal__ham {
+  transform: rotateX(-180deg); }
+
+.rotate-x .horizontal__x {
+  transform: rotateX(180deg); }
+
+.rotate-x .horizontal__ham {
+  transform: rotateX(0deg); }
+
+.vertical {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 200px;
+  margin: 0 auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.2;
+  background: none;
+  border: none; }
+  .vertical::before {
+    content: "vertical"; }
+
+.vertical__x, .vertical__ham {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 1s ease; }
+
+.vertical__x {
+  transform: rotateY(0deg); }
+
+.vertical__ham {
+  transform: rotateY(-180deg); }
+
+.rotate-y .vertical__x {
+  transform: rotateY(180deg); }
+
+.rotate-y .vertical__ham {
+  transform: rotateY(0deg); }
 
 .card-container, .front, .back {
   width: 200px;

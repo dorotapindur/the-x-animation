@@ -10,7 +10,6 @@ button.addEventListener('click', () => {
 })
 
 horizontal.addEventListener('click', () => {
-
     card.classList.toggle('transform');
     document.documentElement.style.setProperty('--front', 'rotateX(-180deg)');
     document.documentElement.style.setProperty('--back', 'rotateX(0deg)');
@@ -19,7 +18,6 @@ horizontal.addEventListener('click', () => {
 })
 
 vertical.addEventListener('click', () => {
-
     card.classList.toggle('transform');
     document.documentElement.style.setProperty('--front', 'rotateY(0deg)');
     document.documentElement.style.setProperty('--back', 'rotateY(180deg)');

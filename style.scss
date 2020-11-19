@@ -11,8 +11,13 @@ html {
 }
 :root {
     --background:  #ffffff;
-    --color: rgb(41, 40, 40);
-    --x: rgb(126, 148, 1);
+    --color: #292828;
+    --x: #7e9401;
+    --active:  #cff300;
+    --front: rotateX(-180deg);
+    --back: rotateX(0deg);
+    --transform-front: rotateX(0deg);
+    --transform-back: rotateX(180deg);
   }
 .main {
     background-color: var(--background);
@@ -57,7 +62,7 @@ html {
     }
 }
 .options {
-    height: auto;
+    height: 400px;
     max-height: 0px;
     transition: max-height 0.5s ease-out;
     overflow: hidden;
@@ -66,7 +71,7 @@ html {
     color: var(--color);
     text-align: center;
     &--open {
-        max-height: 300px;
+        max-height: 400px;
         transition: max-height 1s linear;
     }
     &__text {
@@ -77,6 +82,7 @@ html {
     &__list {
         list-style-type: none;
         padding: 0;
+        margin: 16px 0 0;
     }
     &__item {
         line-height: 1.5;
@@ -90,6 +96,9 @@ html {
             color: var(--x);
             cursor: pointer;
         }
+        &:active {
+            color: var(--active);
+        }
     }
 }
 .card-container, .front, .back {
@@ -99,7 +108,7 @@ html {
 .card-container {
     position: relative;
     perspective: 200px;
-    margin: 50px auto;
+    margin: 0 auto;
     display: block;
     stroke: var(--color);
     stroke-width: 3.2;
@@ -121,12 +130,15 @@ html {
     overflow: hidden;
     transition: transform 1s ease;
 }
+.front {
+    transform: var(--front);
+}
 .back {
-    transform: rotateY(180deg);
+    transform: var(--back);
 }
-.vertical .front {
-    transform: rotateY(-180deg);
+.transform .front {
+    transform: var(--transform-front);
 }
-.vertical .back {
-    transform: rotateY(0deg);
+.transform .back {
+    transform: var(--transform-back);
 }

@@ -1,0 +1,35 @@
+.horizontal {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 200px;
+    margin: 0 auto;
+    display: block;
+    stroke: var(--color);
+    stroke-width: 3.2;
+    background: none;
+    border: none;
+    &::before {
+        content: "horizontal";
+    }
+}
+.horizontal__x, .horizontal__ham {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform 1s ease;
+}
+.horizontal__x {
+    transform: rotateX(0deg);
+}
+.horizontal__ham {
+    transform: rotateX(-180deg);
+}
+.rotate-x .horizontal__x {
+    transform: rotateX(180deg);
+}
+.rotate-x .horizontal__ham {
+    transform: rotateX(0deg)
+}

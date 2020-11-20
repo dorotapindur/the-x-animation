@@ -1,0 +1,35 @@
+.vertical {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 200px;
+    margin: 0 auto;
+    display: block;
+    stroke: var(--color);
+    stroke-width: 3.2;
+    background: none;
+    border: none;
+    &::before {
+        content: "vertical";
+    }
+}
+.vertical__x, .vertical__ham {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform 1s ease;
+}
+.vertical__x {
+    transform: rotateY(0deg);
+}
+.vertical__ham {
+    transform: rotateY(-180deg);
+}
+.rotate-y .vertical__x {
+    transform: rotateY(180deg);
+}
+.rotate-y .vertical__ham {
+    transform: rotateY(0deg)
+}

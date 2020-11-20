@@ -1,8 +1,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(0 -244.08)" fill="none" stroke="#000" stroke-linecap="round">
-  <path d="m12.282 270.54h29.075" stroke-width="3.2016"/>
-  <path d="m12.254 280.88h29.2" stroke-width="3.175"/>
-  <path d="m12.226 259.87h29.172" stroke-width="3.175"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="3.175">
+  <path d="m12.226 25.844h29.172"/>
+  <path d="m12.226 35.898h29.172"/>
+  <path d="m12.226 15.79h29.172"/>
  </g>
 </svg>

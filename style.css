@@ -44,6 +44,122 @@
     -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg); } }
 
+.vertical {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 200px;
+  margin: 0 auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.175;
+  background: none;
+  border: none;
+  cursor: pointer; }
+  .vertical::before {
+    content: "vertical";
+    color: var(--x); }
+
+.vertical__x, .vertical__ham {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 1s ease; }
+
+.vertical__x {
+  transform: rotateY(0deg); }
+
+.vertical__ham {
+  transform: rotateY(-180deg); }
+
+.rotate-y .vertical__x {
+  transform: rotateY(180deg); }
+
+.rotate-y .vertical__ham {
+  transform: rotateY(0deg); }
+
+.horizontal {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 200px;
+  margin: 0 auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.175;
+  background: none;
+  border: none;
+  cursor: pointer; }
+  .horizontal::before {
+    content: "horizontal";
+    color: var(--x); }
+
+.horizontal__x, .horizontal__ham {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 1s ease; }
+
+.horizontal__x {
+  transform: rotateX(0deg); }
+
+.horizontal__ham {
+  transform: rotateX(-180deg); }
+
+.rotate-x .horizontal__x {
+  transform: rotateX(180deg); }
+
+.rotate-x .horizontal__ham {
+  transform: rotateX(0deg); }
+
+.angle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  stroke: var(--color);
+  stroke-width: 3.175;
+  background: none;
+  border: none;
+  cursor: pointer; }
+  .angle::before {
+    content: "angle";
+    color: var(--x); }
+  .angle__ham {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.angle__path--middle {
+  stroke-dasharray: 29 29;
+  stroke-dashoffset: 0;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+.slant .angle__path--middle {
+  stroke-dasharray: 0 29;
+  stroke-dashoffset: -15; }
+
+.angle__path--top {
+  transform: rotate(0deg);
+  transform-origin: 14px 22px;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+.slant .angle__path--top {
+  transform: rotate(45deg); }
+
+.angle__path--bottom {
+  transform: rotate(0deg);
+  transform-origin: 15px 31px;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+.slant .angle__path--bottom {
+  transform: rotate(-45deg); }
+
 html {
   box-sizing: border-box; }
 
@@ -88,7 +204,7 @@ html {
   margin: 50px auto;
   display: block;
   stroke: var(--color);
-  stroke-width: 3.2;
+  stroke-width: 3.175;
   cursor: pointer;
   background: none;
   border: none; }
@@ -112,24 +228,9 @@ html {
   .options__text {
     width: max-content;
     display: block;
-    margin: 0 auto; }
-  .options__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 16px 0 0; }
-  .options__item {
-    line-height: 1.5;
-    font-weight: 700;
+    margin: 0 auto 40px;
     font-size: 18px;
-    transition: color 0.2s ease-in;
-    width: max-content;
-    display: block;
-    margin: 0 auto; }
-    .options__item:hover {
-      color: var(--x);
-      cursor: pointer; }
-    .options__item:active {
-      color: var(--active); }
+    font-weight: 600; }
   .options__x-box {
     width: 80%;
     display: flex;
@@ -137,110 +238,3 @@ html {
     align-items: center;
     justify-content: space-around;
     margin: 0 auto; }
-
-.horizontal {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.2;
-  background: none;
-  border: none; }
-  .horizontal::before {
-    content: "horizontal"; }
-
-.horizontal__x, .horizontal__ham {
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  overflow: hidden;
-  transition: transform 1s ease; }
-
-.horizontal__x {
-  transform: rotateX(0deg); }
-
-.horizontal__ham {
-  transform: rotateX(-180deg); }
-
-.rotate-x .horizontal__x {
-  transform: rotateX(180deg); }
-
-.rotate-x .horizontal__ham {
-  transform: rotateX(0deg); }
-
-.vertical {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.2;
-  background: none;
-  border: none; }
-  .vertical::before {
-    content: "vertical"; }
-
-.vertical__x, .vertical__ham {
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  overflow: hidden;
-  transition: transform 1s ease; }
-
-.vertical__x {
-  transform: rotateY(0deg); }
-
-.vertical__ham {
-  transform: rotateY(-180deg); }
-
-.rotate-y .vertical__x {
-  transform: rotateY(180deg); }
-
-.rotate-y .vertical__ham {
-  transform: rotateY(0deg); }
-
-.card-container, .front, .back {
-  width: 200px;
-  height: 200px; }
-
-.card-container {
-  position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.2;
-  cursor: pointer;
-  background: none;
-  border: none; }
-  .card-container:focus {
-    outline: none; }
-  .card-container:focus-visible {
-    outline: 2px solid var(--x); }
-
-.front, .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  overflow: hidden;
-  transition: transform 1s ease; }
-
-.front {
-  transform: var(--front); }
-
-.back {
-  transform: var(--back); }
-
-.transform .front {
-  transform: var(--transform-front); }
-
-.transform .back {
-  transform: var(--transform-back); }

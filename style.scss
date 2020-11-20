@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import "modules/_lines.scss";
 @import "modules/_keyframes.scss";
+@import "modules/_vertical.scss";
+@import "modules/_horizontal.scss";
+@import "modules/_angle.scss";
 
 html {
     box-sizing: border-box;
@@ -50,7 +53,7 @@ html {
     margin: 50px auto;
     display: block;
     stroke: var(--color);
-    stroke-width: 3.2;
+    stroke-width: 3.175;
     cursor: pointer;
     background: none;
     border: none;
@@ -77,28 +80,9 @@ html {
     &__text {
         width: max-content;
         display: block;
-        margin: 0 auto;
-    }
-    &__list {
-        list-style-type: none;
-        padding: 0;
-        margin: 16px 0 0;
-    }
-    &__item {
-        line-height: 1.5;
-        font-weight: 700;
+        margin: 0 auto 40px;
         font-size: 18px;
-        transition: color 0.2s ease-in;
-        width: max-content;
-        display: block;
-        margin: 0 auto;
-        &:hover {
-            color: var(--x);
-            cursor: pointer;
-        }
-        &:active {
-            color: var(--active);
-        }
+        font-weight: 600;
     }
     &__x-box {
         width: 80%;
@@ -109,115 +93,4 @@ html {
         margin: 0 auto;
     }
 }
-.horizontal {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    perspective: 200px;
-    margin: 0 auto;
-    display: block;
-    stroke: var(--color);
-    stroke-width: 3.2;
-    background: none;
-    border: none;
-    &::before {
-        content: "horizontal";
-    }
-}
-.horizontal__x, .horizontal__ham {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transition: transform 1s ease;
-}
-.horizontal__x {
-    transform: rotateX(0deg);
-}
-.horizontal__ham {
-    transform: rotateX(-180deg);
-}
-.rotate-x .horizontal__x {
-    transform: rotateX(180deg);
-}
-.rotate-x .horizontal__ham {
-    transform: rotateX(0deg)
-}
-.vertical {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    perspective: 200px;
-    margin: 0 auto;
-    display: block;
-    stroke: var(--color);
-    stroke-width: 3.2;
-    background: none;
-    border: none;
-    &::before {
-        content: "vertical";
-    }
-}
-.vertical__x, .vertical__ham {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transition: transform 1s ease;
-}
-.vertical__x {
-    transform: rotateY(0deg);
-}
-.vertical__ham {
-    transform: rotateY(-180deg);
-}
-.rotate-y .vertical__x {
-    transform: rotateY(180deg);
-}
-.rotate-y .vertical__ham {
-    transform: rotateY(0deg)
-}
 
-.card-container, .front, .back {
-    width: 200px;
-    height: 200px;
-}
-.card-container {
-    position: relative;
-    perspective: 200px;
-    margin: 0 auto;
-    display: block;
-    stroke: var(--color);
-    stroke-width: 3.2;
-    cursor: pointer;
-    background: none;
-    border: none;
-    &:focus {
-        outline: none;
-    }
-    &:focus-visible {
-        outline: 2px solid var(--x);
-    }
-}
-.front, .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transition: transform 1s ease;
-}
-.front {
-    transform: var(--front);
-}
-.back {
-    transform: var(--back);
-}
-.transform .front {
-    transform: var(--transform-front);
-}
-.transform .back {
-    transform: var(--transform-back);
-}

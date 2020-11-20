@@ -6,11 +6,13 @@
     margin: 0 auto;
     display: block;
     stroke: var(--color);
-    stroke-width: 3.2;
+    stroke-width: 3.175;
     background: none;
     border: none;
+    cursor: pointer;
     &::before {
         content: "horizontal";
+        color: var(--x);
     }
 }
 .horizontal__x, .horizontal__ham {

@@ -3,6 +3,8 @@ const options = document.querySelector('.options--js');
 const horizontal = document.querySelector('.horizontal--js');
 const vertical = document.querySelector('.vertical--js');
 const angle = document.querySelector('.angle--js');
+const snake = document.querySelector('.snake--js');
+
 
 button.addEventListener('click', () => {
     button.classList.toggle('opened');
@@ -16,4 +18,7 @@ vertical.addEventListener('click', () => {
 })
 angle.addEventListener('click', () => {
     angle.classList.toggle('slant');
+})
+snake.addEventListener('click', () => {
+    snake.classList.toggle('open-snake');
 })

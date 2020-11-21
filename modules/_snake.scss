@@ -23,4 +23,32 @@
         top: 0;
         left: 0;
     }
+    &__path {
+        transition: stroke-dasharray 1s cubic-bezier(0.68, 0.01, 0.08, 0.97), stroke-dashoffset 1s cubic-bezier(0.68, 0.01, 0.08, 0.97);
+        &--one {
+            stroke-dasharray: 29 29;
+            stroke-dashoffset: 0;
+        }
+        &--two {
+            stroke-dasharray: 29 169;
+            stroke-dashoffset: -139.5;
+        }
+        &--three {
+            stroke-dasharray: 29 172;
+            stroke-dashoffset: -170.5;
+        }
+    }
+}
+
+.open-snake .snake__path--one {
+    stroke-dasharray: 0 29;
+    stroke-dashoffset: -15;
+}
+.open-snake .snake__path--two {
+    stroke-dasharray: 29 199;
+    stroke-dashoffset: 0;
+}
+.open-snake .snake__path--three {
+    stroke-dasharray: 29 200;
+    stroke-dashoffset: 0;
 }

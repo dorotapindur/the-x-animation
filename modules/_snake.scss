@@ -1,0 +1,26 @@
+.snake {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 200px;
+    margin: 0 auto;
+    display: block;
+    stroke: var(--color);
+    stroke-width: 3.175;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &::before {
+        content: "snake";
+        display: block;
+        width: 200px;
+        text-align: center;
+        position: absolute;
+        top: 15px;
+    }
+    &__shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

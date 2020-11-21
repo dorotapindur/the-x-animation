@@ -227,16 +227,16 @@ html {
 
 .options {
   height: auto;
-  max-height: 0px;
-  transition: max-height 0.5s ease-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
   color: var(--color);
   text-align: center; }
   .options--open {
-    max-height: 1000px;
-    transition: max-height 1s linear; }
+    opacity: 1;
+    transition: opacity 1s linear; }
   .options__text {
     width: max-content;
     display: block;

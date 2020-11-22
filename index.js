@@ -5,6 +5,8 @@ const vertical = document.querySelector('.vertical--js');
 const angle = document.querySelector('.angle--js');
 const snake = document.querySelector('.snake--js');
 const slide = document.querySelector('.slide--js');
+const snakeCodeButton = document.querySelector('.snake__code-button--js');
+const snakeCode = document.querySelector('.code--js');
 
 
 button.addEventListener('click', () => {
@@ -25,4 +27,13 @@ snake.addEventListener('click', () => {
 })
 slide.addEventListener('click', () => {
     slide.classList.toggle('closed');
+})
+let codeSnippet = document.getElementById("snake").innerHTML;
+let element = codeSnippet.split('>');
+
+snakeCodeButton.addEventListener('click', () => {
+    for (let i = 0; i < element.length; i++) {
+    let replaceBracket = i == element.length - 1 ? "" : ">";
+    snakeCode.textContent += element[i] + replaceBracket + " \r\n";
+    }
 })

@@ -24,7 +24,8 @@ html {
     --back: rotateX(0deg);
     --transform-front: rotateX(0deg);
     --transform-back: rotateX(180deg);
-  }
+}
+
 .main {
     background-color: var(--background);
     font-family: 'Open Sans', sans-serif;
@@ -94,5 +95,25 @@ html {
         justify-content: space-around;
         margin: 0 auto;
     }
+}
+.see-code {
+    position: absolute;
+    width: max-content;
+    z-index: 1;
+    bottom: -25px;
+    left: 59px;
+}
+.code-container {
+    width: 100vw;
+    background: pink;
+}
+pre {
+    white-space: pre-wrap;
+    text-align: left;
+}
+.code {
+    width: 500px;
+    overflow-wrap: normal;
+    
 }
 

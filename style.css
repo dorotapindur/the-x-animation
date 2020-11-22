@@ -240,31 +240,27 @@
     position: absolute;
     top: 0;
     left: 0; }
+  .slide__path {
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .slide__path--one {
+      stroke-dasharray: 0 29;
+      stroke-dashoffset: -15; }
+    .slide__path--two {
+      stroke-dasharray: 29 105;
+      stroke-dashoffset: 0; }
+    .slide__path--three {
+      stroke-dasharray: 29 105;
+      stroke-dashoffset: 0; }
 
-.slide__path {
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1); }
-
-.slide__path--one {
-  stroke-dasharray: 0 29;
-  stroke-dashoffset: -15; }
-
-.opened .slide__path--one {
+.closed .slide__path--one {
   stroke-dasharray: 29 29;
   stroke-dashoffset: 0; }
 
-.slide__path--two {
-  stroke-dasharray: 29 105;
-  stroke-dashoffset: 0; }
-
-.opened .slide__path--two {
+.closed .slide__path--two {
   stroke-dasharray: 43 105;
   stroke-dashoffset: -72; }
 
-.slide__path--three {
-  stroke-dasharray: 29 105;
-  stroke-dashoffset: 0; }
-
-.opened .slide__path--three {
+.closed .slide__path--three {
   stroke-dasharray: 43 105;
   stroke-dashoffset: -72; }
 

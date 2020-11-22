@@ -24,5 +24,5 @@ snake.addEventListener('click', () => {
     snake.classList.toggle('open-snake');
 })
 slide.addEventListener('click', () => {
-    slide.classList.toggle('opened');
+    slide.classList.toggle('closed');
 })

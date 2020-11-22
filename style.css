@@ -43,17 +43,8 @@
     transform: rotateY(360deg); } }
 
 .vertical {
-  width: 200px;
-  height: 200px;
   position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  background: none;
-  border: none;
-  cursor: pointer; }
+  perspective: 200px; }
   .vertical::before {
     content: "vertical";
     display: block;
@@ -83,17 +74,8 @@
   transform: rotateY(0deg); }
 
 .horizontal {
-  width: 200px;
-  height: 200px;
   position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  background: none;
-  border: none;
-  cursor: pointer; }
+  perspective: 200px; }
   .horizontal::before {
     content: "horizontal";
     display: block;
@@ -123,16 +105,7 @@
   transform: rotateX(0deg); }
 
 .angle {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  background: none;
-  border: none;
-  cursor: pointer; }
+  position: relative; }
   .angle::before {
     content: "angle";
     display: block;
@@ -171,17 +144,7 @@
   transform: rotate(-45deg); }
 
 .snake {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  background: none;
-  border: none;
-  cursor: pointer; }
+  position: relative; }
   .snake::before {
     content: "snake";
     display: block;
@@ -218,17 +181,7 @@
   stroke-dashoffset: 0; }
 
 .slide {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  perspective: 200px;
-  margin: 0 auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  background: none;
-  border: none;
-  cursor: pointer; }
+  position: relative; }
   .slide::before {
     content: "slide";
     display: block;
@@ -274,18 +227,23 @@ html {
   --background:  #ffffff;
   --color: #292828;
   --x: #7e9401;
-  --active:  #cff300;
+  --code:  #cff300;
   --front: rotateX(-180deg);
   --back: rotateX(0deg);
   --transform-front: rotateX(0deg);
   --transform-back: rotateX(180deg); }
+
+body {
+  margin: 0;
+  padding: 0; }
 
 .main {
   background-color: var(--background);
   font-family: 'Open Sans', sans-serif;
   min-height: 100vh;
   width: 100vw;
-  padding: 20px 10px; }
+  padding: 20px 10px;
+  margin: 0; }
   .main__header {
     margin: 0;
     color: var(--color);
@@ -294,7 +252,7 @@ html {
     .main__header--x {
       color: var(--x);
       display: inline-block;
-      animation: rotating-x 2s linear infinite;
+      animation: rotating-x 3s linear infinite;
       font-size: 40px; }
   .main__description {
     font-size: 18px;
@@ -324,16 +282,27 @@ html {
   width: 100%;
   margin: 0 auto;
   color: var(--color);
-  text-align: center; }
+  text-align: center;
+  font-size: 18px; }
   .options--open {
     opacity: 1;
     transition: opacity 1s linear; }
-  .options__text {
-    width: max-content;
+  .options__item {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 200px;
+    margin: 0 auto 50px;
     display: block;
-    margin: 0 auto 40px;
-    font-size: 18px;
-    font-weight: 600; }
+    stroke: var(--color);
+    stroke-width: 3.175;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: stroke .3s ease-in; }
+    .options__item:hover {
+      stroke: var(--x); }
   .options__x-box {
     width: 80%;
     display: flex;
@@ -346,16 +315,38 @@ html {
   position: absolute;
   width: max-content;
   z-index: 1;
-  bottom: -25px;
-  left: 59px; }
+  bottom: 15px;
+  left: 59px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 14px; }
+  .see-code:hover {
+    background: none;
+    color: var(--x); }
+  .see-code:focus-visible {
+    outline: solid 1px var(--x); }
 
 .code-container {
-  width: 100vw;
-  background: pink; }
+  display: none;
+  width: 90%;
+  background: var(--color);
+  color: var(--code);
+  height: auto;
+  max-height: 0;
+  transition: max-height 2s linear;
+  margin: 0 auto 50px;
+  padding: 20px; }
+  .code-container--opened {
+    display: block;
+    max-height: 1000px; }
 
 pre {
   white-space: pre-wrap;
-  text-align: left; }
+  text-align: left;
+  margin: 0; }
 
 .code {
   width: 500px;

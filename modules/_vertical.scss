@@ -1,15 +1,6 @@
 .vertical {
-    width: 200px;
-    height: 200px;
     position: relative;
     perspective: 200px;
-    margin: 0 auto;
-    display: block;
-    stroke: var(--color);
-    stroke-width: 3.175;
-    background: none;
-    border: none;
-    cursor: pointer;
     &::before {
         content: "vertical";
         display: block;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro&display=swap");
 .line {
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1); }
 
@@ -44,7 +44,7 @@
 
 .vertical {
   position: relative;
-  perspective: 200px; }
+  perspective: 400px; }
   .vertical::before {
     content: "vertical";
     display: block;
@@ -291,7 +291,6 @@ body {
     width: 200px;
     height: 200px;
     position: relative;
-    perspective: 200px;
     margin: 0 auto 50px;
     display: block;
     stroke: var(--color);
@@ -313,41 +312,63 @@ body {
 
 .see-code {
   position: absolute;
-  width: max-content;
+  bottom: 0;
+  left: 0;
+  width: 200px;
   z-index: 1;
-  bottom: 15px;
-  left: 59px;
   cursor: pointer;
   border: none;
   background: none;
   outline: none;
   font-family: monospace;
-  font-size: 14px; }
+  font-size: 14px;
+  text-align: center; }
   .see-code:hover {
     background: none;
     color: var(--x); }
+  .see-code:focus {
+    outline: none; }
   .see-code:focus-visible {
-    outline: solid 1px var(--x); }
+    outline: 2px solid var(--x); }
 
 .code-container {
-  display: none;
   width: 90%;
-  background: var(--color);
+  background-color: var(--color);
   color: var(--code);
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.01, 0.21, 1), box-shadow 0.5s cubic-bezier(0.25, 0.01, 0.21, 1);
   height: auto;
-  max-height: 0;
-  transition: max-height 2s linear;
+  max-height: 0px;
   margin: 0 auto 50px;
-  padding: 20px; }
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px grey; }
   .code-container--opened {
-    display: block;
-    max-height: 1000px; }
+    max-height: 500px;
+    box-shadow: inset 0 0 10px grey;
+    overflow: auto; }
+  .code-container__close {
+    position: sticky;
+    top: 10px;
+    left: calc(100% - 74px);
+    cursor: pointer;
+    background: #424242;
+    color: var(--background);
+    border-radius: 7px; }
+    .code-container__close:hover {
+      background: #686868;
+      color: var(--code); }
+    .code-container__close:focus {
+      outline: none; }
+    .code-container__close:focus-visible {
+      outline: 2px solid var(--x); }
 
 pre {
   white-space: pre-wrap;
   text-align: left;
-  margin: 0; }
+  margin: 20px;
+  width: auto; }
 
 .code {
-  width: 500px;
   overflow-wrap: normal; }

@@ -1,6 +1,6 @@
 .vertical {
     position: relative;
-    perspective: 200px;
+    perspective: 400px;
     &::before {
         content: "vertical";
         display: block;

@@ -1,5 +1,13 @@
 export function snakeSnippet() {
 
+let codeSource;
+const snake = document.querySelector('.snake--js');
+const snakeCodeButton = document.querySelector('.snake__code-button--js');
+const htmlCodeSnippet = document.querySelector('.html-code--js');
+const scssCodeSnippet = document.querySelector('.scss-code--js');
+const jsCodeSnippet = document.querySelector('.js-code--js');
+const codeContainer = document.querySelector('.code-container--js');
+
 snakeCodeButton.addEventListener('click', () => {
     codeSource = snake.innerHTML;
     htmlCodeSnippet.innerHTML = '';
@@ -79,4 +87,9 @@ snake.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
+}
+export function hello() {
+    const greeting = "hello, it's me!";
+    console.log(greeting);
+
 }

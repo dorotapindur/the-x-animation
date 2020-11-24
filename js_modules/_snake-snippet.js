@@ -12,35 +12,24 @@ snakeCodeButton.addEventListener('click', () => {
     codeSource = snake.innerHTML;
     htmlCodeSnippet.innerHTML = '';
     htmlCodeSnippet.textContent = 
-`HTML:
-
-<div class="snake open-snake snake--js"> 
+`<div class="snake open-snake snake--js"> 
     ${codeSource}
 </div>`;
     scssCodeSnippet.innerHTML = '';
     scssCodeSnippet.innerHTML = 
-`SCSS:
-
-:root {
-    --color: #292828;
-    --x: #7e9401;
-}
-.snake {
+`.snake {
     width: 200px;
     height: 200px;
     position: relative;
     margin: 0 auto 50px;
     display: block;
-    stroke: var(--color);
+    stroke: black;
     stroke-width: 3.175;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 14px;
     transition: stroke .3s ease-in;
-    &:hover {
-        stroke: var(--x);
-    }   
     &__shape {
         position: absolute;
         top: 0;
@@ -78,9 +67,7 @@ snakeCodeButton.addEventListener('click', () => {
 `;
     jsCodeSnippet.innerHTML = '';
     jsCodeSnippet.innerHTML = 
-`JS:
-
-const snake = document.querySelector('.snake--js');
+`const snake = document.querySelector('.snake--js');
 
 snake.addEventListener('click', () => {
     snake.classList.toggle('open-snake');

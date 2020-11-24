@@ -2,6 +2,8 @@ import {hello} from './js_modules/_snake-snippet.js';
 import {snakeSnippet} from './js_modules/_snake-snippet.js';
 import {slideSnippet} from './js_modules/_slide-snippet.js';
 import {angleSnippet} from './js_modules/_angle-snippet.js';
+import {verticalSnippet} from './js_modules/_vertical-snippet.js';
+import {horizontalSnippet} from './js_modules/_horizontal-snippet.js';
 
 hello();
 
@@ -15,8 +17,7 @@ const slide = document.querySelector('.slide--js');
 
 const codeContainer = document.querySelector('.code-container--js');
 const close = document.querySelector('.close--js');
-const verticalCodeButton = document.querySelector('.vertical__code-button--js');
-const horizontalCodeButton = document.querySelector('.horizontal__code-button--js');
+
 
 button.addEventListener('click', () => {
     button.classList.toggle('opened');
@@ -42,6 +43,8 @@ slide.addEventListener('click', () => {
 snakeSnippet();
 slideSnippet();
 angleSnippet();
+verticalSnippet();
+horizontalSnippet();
 
 close.addEventListener('click', () => {
     codeContainer.classList.remove('code-container--opened');

@@ -13,16 +13,12 @@ export function slideSnippet() {
     codeSource = slide.innerHTML;
     htmlCodeSnippet.innerHTML='';
     htmlCodeSnippet.textContent = 
-`HTML:
-
-<div class="slide slide--js">
+`<div class="slide slide--js">
 ${codeSource}
 </div>`;
     scssCodeSnippet.innerHTML = '';
     scssCodeSnippet.innerHTML = 
-`SCSS:
-
-.slide {
+`.slide {
     width: 200px;
     height: 200px;
     position: relative;
@@ -72,9 +68,7 @@ ${codeSource}
 `;
     jsCodeSnippet.innerHTML = '';
     jsCodeSnippet.innerHTML = 
-`JS:
-
-const slide = document.querySelector('.slide--js');
+`const slide = document.querySelector('.slide--js');
 
 slide.addEventListener('click', () => {
     slide.classList.toggle('closed');

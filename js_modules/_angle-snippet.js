@@ -1,7 +1,6 @@
 export function angleSnippet() {
     
     const angleCodeButton = document.querySelector('.angle__code-button--js');
-    const angle = document.querySelector('.angle--js');
     const htmlCodeSnippet = document.querySelector('.html-code--js');
     const scssCodeSnippet = document.querySelector('.scss-code--js');
     const jsCodeSnippet = document.querySelector('.js-code--js');
@@ -10,9 +9,7 @@ export function angleSnippet() {
     angleCodeButton.addEventListener('click', () => {
     htmlCodeSnippet.innerHTML='';
     htmlCodeSnippet.textContent = 
-`HTML:
-
-<div class="angle slant angle--js">
+`<div class="angle slant angle--js">
     <svg class="angle__ham" width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke-linecap="round">
             <path class="angle__path--middle" d="m12.226 25.844h29.172"/>
@@ -23,9 +20,7 @@ export function angleSnippet() {
 </div>`;
     scssCodeSnippet.innerHTML = '';
     scssCodeSnippet.innerHTML = 
-`SCSS:
-
-.angle {
+`.angle {
     width: 200px;
     height: 200px;
     position: relative;
@@ -74,9 +69,7 @@ export function angleSnippet() {
 `;
     jsCodeSnippet.innerHTML = '';
     jsCodeSnippet.innerHTML = 
-`JS:
-
-const angle = document.querySelector('.angle--js');
+`const angle = document.querySelector('.angle--js');
 
 angle.addEventListener('click', () => {
     angle.classList.toggle('slant');

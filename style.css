@@ -218,7 +218,8 @@
   stroke-dashoffset: -72; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -314,7 +315,7 @@ body {
 
 .see-code {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   width: 200px;
   z-index: 1;
@@ -322,12 +323,18 @@ body {
   border: none;
   background: none;
   outline: none;
-  font-family: monospace;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   text-align: center; }
+  .see-code:link {
+    color: var(--color); }
+  .see-code:visited {
+    color: var(--color); }
   .see-code:hover {
-    background: none;
     color: var(--x); }
+  .see-code:active {
+    color: var(--code); }
   .see-code:focus {
     outline: none; }
   .see-code:focus-visible {
@@ -335,7 +342,7 @@ body {
 
 .code-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
   column-gap: 5px;
   row-gap: 5px;
   width: 90%;
@@ -350,11 +357,12 @@ body {
   border-radius: 10px;
   box-shadow: inset 0 0 0px var(--grey);
   position: relative; }
-  @media screen and (max-width: 515px) {
+  @media screen and (max-width: 1400px) {
     .code-container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      max-width: 600px; } }
   .code-container--opened {
-    max-height: 1500px;
+    max-height: 1600px;
     box-shadow: inset 0 0 10px var(--grey);
     padding: 15px; }
   .code-container__button-strap {
@@ -372,7 +380,8 @@ body {
     background: var(--dark-grey);
     color: var(--background);
     border-radius: 7px;
-    z-index: 3; }
+    z-index: 3;
+    font-family: 'Open Sans', sans-serif; }
     .code-container__close:hover {
       background: var(--code);
       color: var(--color); }
@@ -382,7 +391,7 @@ body {
       outline: 2px solid var(--x); }
   .code-container__item {
     overflow-y: auto;
-    max-height: 400px;
+    max-height: 500px;
     border: 2px var(--dark-grey) solid;
     border-radius: 7px;
     padding: 0 5px;

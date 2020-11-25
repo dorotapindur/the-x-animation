@@ -217,129 +217,6 @@
   stroke-dasharray: 43 105;
   stroke-dashoffset: -72; }
 
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-:root {
-  --background:  #ffffff;
-  --color: #292828;
-  --x: #7e9401;
-  --code:  #cff300;
-  --grey: #a5a5a5;
-  --dark-grey:  #666565;
-  --front: rotateX(-180deg);
-  --back: rotateX(0deg);
-  --transform-front: rotateX(0deg);
-  --transform-back: rotateX(180deg); }
-
-body {
-  margin: 0;
-  padding: 0; }
-
-.main {
-  background-color: var(--background);
-  font-family: 'Open Sans', sans-serif;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 20px 10px;
-  margin: 0; }
-  .main__header {
-    margin: 0;
-    color: var(--color);
-    text-align: center;
-    font-size: 30px; }
-    .main__header--x {
-      color: var(--x);
-      display: inline-block;
-      animation: rotating-x 3s linear infinite;
-      font-size: 40px; }
-  .main__description {
-    font-size: 18px;
-    color: var(--color);
-    text-align: center;
-    display: block;
-    width: 100%;
-    margin: 0 auto; }
-
-.button {
-  margin: 50px auto;
-  display: block;
-  stroke: var(--color);
-  stroke-width: 3.175;
-  cursor: pointer;
-  background: none;
-  border: none; }
-  .button:focus {
-    outline: none; }
-  .button:focus-visible {
-    outline: 2px solid var(--x); }
-
-.options {
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  width: 100%;
-  margin: 0 auto;
-  color: var(--color);
-  text-align: center;
-  font-size: 18px; }
-  .options--open {
-    opacity: 1;
-    transition: opacity 1s linear; }
-  .options__item {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    margin: 0 auto 50px;
-    display: block;
-    stroke: var(--color);
-    stroke-width: 3.175;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    transition: stroke .3s ease-in; }
-    .options__item:hover {
-      stroke: var(--x); }
-  .options__x-box {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto; }
-
-.see-code {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 200px;
-  z-index: 1;
-  cursor: pointer;
-  border: none;
-  background: none;
-  outline: none;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  text-align: center; }
-  .see-code:link {
-    color: var(--color); }
-  .see-code:visited {
-    color: var(--color); }
-  .see-code:hover {
-    color: var(--x); }
-  .see-code:active {
-    color: var(--code); }
-  .see-code:focus {
-    outline: none; }
-  .see-code:focus-visible {
-    outline: 2px solid var(--x); }
-
 .code-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(400px, 1fr));
@@ -440,3 +317,167 @@ pre {
   @media screen and (max-width: 515px) {
     .code {
       font-size: 14px; } }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+:root {
+  --background:  #ffffff;
+  --color: #292828;
+  --x: #718500;
+  --code:  #cff300;
+  --see-code: #007a6a;
+  --grey: #a5a5a5;
+  --dark-grey:  #4d4c4c;
+  --front: rotateX(-180deg);
+  --back: rotateX(0deg);
+  --transform-front: rotateX(0deg);
+  --transform-back: rotateX(180deg); }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.main {
+  background-color: var(--background);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px 10px;
+  margin: 0; }
+  .main__header {
+    margin: 0;
+    color: var(--color);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700; }
+    .main__header--x {
+      color: var(--x);
+      display: inline-block;
+      animation: rotating-x 3s linear infinite;
+      font-size: 40px; }
+  .main__description {
+    font-size: 18px;
+    color: var(--color);
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+
+.button {
+  margin: 50px auto;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 3.175;
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: relative; }
+  .button:focus {
+    outline: none; }
+  .button:focus-visible {
+    outline: 2px solid var(--x); }
+  .button::after {
+    content: "menu";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: var(--color);
+    font-size: 18px;
+    text-align: center;
+    z-index: 1; }
+
+.button.opened::after {
+  content: "close";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  color: var(--dark-grey);
+  font-size: 18px;
+  text-align: center;
+  z-index: 1; }
+
+.anchor {
+  width: 100%;
+  height: 1px;
+  background: none; }
+
+.options {
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--color);
+  text-align: center;
+  font-size: 18px; }
+  .options--open {
+    max-height: 1000px;
+    opacity: 1;
+    transition: opacity 1s ease-out, max-height 1s linear; }
+  .options__header {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 0; }
+  .options__instruction {
+    font-size: 18px;
+    font-weight: 400; }
+  .options__x-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto 0; }
+  .options__item {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto 50px;
+    display: block;
+    stroke: var(--color);
+    stroke-width: 3.175;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: stroke .3s ease-in; }
+    .options__item:hover {
+      stroke: var(--x); }
+
+.see-code {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 200px;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: center; }
+  .see-code:link {
+    color: var(--dark-grey); }
+  .see-code:visited {
+    color: var(--dark-grey); }
+  .see-code:hover {
+    color: var(--see-code); }
+  .see-code:active {
+    color: var(--code); }
+  .see-code:focus {
+    outline: none; }
+  .see-code:focus-visible {
+    outline: 2px solid var(--x); }

@@ -72,4 +72,3 @@ snake.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-

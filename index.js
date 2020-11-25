@@ -1,3 +1,9 @@
+export * from './js_modules/snake-snippet.js';
+export * from './js_modules/slide-snippet.js';
+export * from './js_modules/angle-snippet.js';
+export * from './js_modules/vertical-snippet.js';
+export * from './js_modules/horizontal-snippet.js';
+
 import * as snakeSnippet from './js_modules/snake-snippet.js';
 import * as slideSnippet from './js_modules/slide-snippet.js';
 import * as angleSnippet from './js_modules/angle-snippet.js';

@@ -1,6 +1,13 @@
 .horizontal {
-    position: relative;
     perspective: 200px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    stroke: var(--color);
+    transition: stroke .3s ease-in;
+    &:hover {
+        stroke: var(--x);
+    }    
     &::before {
         content: "horizontal";
         display: block;

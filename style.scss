@@ -19,12 +19,11 @@ html {
 }
 :root {
     --background:  #ffffff;
-    --color: #292828;
+    --color: #181818;
     --x: #718500;
     --code:  #cff300;
-    --see-code: #007a6a;
-    --grey: #a5a5a5;
-    --dark-grey:  #4d4c4c;
+    --grey: #c7c7c7;
+    --dark-grey:  #505050;
     --front: rotateX(-180deg);
     --back: rotateX(0deg);
     --transform-front: rotateX(0deg);
@@ -55,7 +54,7 @@ body {
         }
     }
     &__description {
-        font-size: 18px;
+        font-size: 22px;
         color: var(--color);
         text-align: center;
         display: block;
@@ -92,6 +91,7 @@ body {
     }
 }
 .button.opened {
+    stroke: var(--dark-grey);
     &::after {
         content: "close";
         display: block;
@@ -144,26 +144,22 @@ body {
         margin: 50px auto 0;
     }
     &__item {
-        width: 200px;
-        height: 200px;
         position: relative;
+        width: 200px;
+        height: 200px;  
         margin: 0 auto 50px;
-        display: block;
-        stroke: var(--color);
+        display: block; 
+        font-size: 16px;
         stroke-width: 3.175;
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 14px;
-        transition: stroke .3s ease-in;
-        &:hover {
-            stroke: var(--x);
-        }
     }
 }
 .see-code {
     position: absolute;
-    bottom: 10px;
+    height: 30px;
+    bottom: 0px;
     left: 0;
     width: 200px;
     z-index: 1;
@@ -173,16 +169,16 @@ body {
     outline: none;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     &:link {
-        color: var(--dark-grey);
+        color: var(--color);
     }
     &:visited {
-        color: var(--dark-grey);
+        color: var(--color);
     }
     &:hover {
-        color: var(--see-code);
+        color: var(--x);
     }
     &:active {
         color: var(--code);
@@ -194,5 +190,4 @@ body {
         outline: 2px solid var(--x);
     }
 }
-
 

@@ -1,5 +1,12 @@
 .angle {
+    width: 200px;
+    height: 200px;
     position: relative;
+    stroke: var(--color);
+    transition: stroke .3s ease-in;
+    &:hover {
+        stroke: var(--x);
+    }    
     &::before {
         content: "angle";
         display: block;

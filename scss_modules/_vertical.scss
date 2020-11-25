@@ -1,6 +1,13 @@
 .vertical {
-    position: relative;
     perspective: 400px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    stroke: var(--color);
+    transition: stroke .3s ease-in;
+    &:hover {
+        stroke: var(--x);
+    }    
     &::before {
         content: "vertical";
         display: block;

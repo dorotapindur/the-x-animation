@@ -43,8 +43,14 @@
     transform: rotateY(360deg); } }
 
 .vertical {
+  perspective: 400px;
+  width: 200px;
+  height: 200px;
   position: relative;
-  perspective: 400px; }
+  stroke: var(--color);
+  transition: stroke .3s ease-in; }
+  .vertical:hover {
+    stroke: var(--x); }
   .vertical::before {
     content: "vertical";
     display: block;
@@ -74,8 +80,14 @@
   transform: rotateY(0deg); }
 
 .horizontal {
+  perspective: 200px;
+  width: 200px;
+  height: 200px;
   position: relative;
-  perspective: 200px; }
+  stroke: var(--color);
+  transition: stroke .3s ease-in; }
+  .horizontal:hover {
+    stroke: var(--x); }
   .horizontal::before {
     content: "horizontal";
     display: block;
@@ -105,7 +117,13 @@
   transform: rotateX(0deg); }
 
 .angle {
-  position: relative; }
+  width: 200px;
+  height: 200px;
+  position: relative;
+  stroke: var(--color);
+  transition: stroke .3s ease-in; }
+  .angle:hover {
+    stroke: var(--x); }
   .angle::before {
     content: "angle";
     display: block;
@@ -144,7 +162,13 @@
   transform: rotate(-45deg); }
 
 .snake {
-  position: relative; }
+  width: 200px;
+  height: 200px;
+  position: relative;
+  stroke: var(--color);
+  transition: stroke .3s ease-in; }
+  .snake:hover {
+    stroke: var(--x); }
   .snake::before {
     content: "snake";
     display: block;
@@ -181,7 +205,13 @@
   stroke-dashoffset: 0; }
 
 .slide {
-  position: relative; }
+  width: 200px;
+  height: 200px;
+  position: relative;
+  stroke: var(--color);
+  transition: stroke .3s ease-in; }
+  .slide:hover {
+    stroke: var(--x); }
   .slide::before {
     content: "slide";
     display: block;
@@ -327,12 +357,11 @@ html {
 
 :root {
   --background:  #ffffff;
-  --color: #292828;
+  --color: #181818;
   --x: #718500;
   --code:  #cff300;
-  --see-code: #007a6a;
-  --grey: #a5a5a5;
-  --dark-grey:  #4d4c4c;
+  --grey: #c7c7c7;
+  --dark-grey:  #505050;
   --front: rotateX(-180deg);
   --back: rotateX(0deg);
   --transform-front: rotateX(0deg);
@@ -361,7 +390,7 @@ body {
       animation: rotating-x 3s linear infinite;
       font-size: 40px; }
   .main__description {
-    font-size: 18px;
+    font-size: 22px;
     color: var(--color);
     text-align: center;
     display: block;
@@ -393,17 +422,19 @@ body {
     text-align: center;
     z-index: 1; }
 
-.button.opened::after {
-  content: "close";
-  display: block;
-  width: 100%;
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  color: var(--dark-grey);
-  font-size: 18px;
-  text-align: center;
-  z-index: 1; }
+.button.opened {
+  stroke: var(--dark-grey); }
+  .button.opened::after {
+    content: "close";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: var(--dark-grey);
+    font-size: 18px;
+    text-align: center;
+    z-index: 1; }
 
 .anchor {
   width: 100%;
@@ -440,24 +471,21 @@ body {
     justify-content: space-around;
     margin: 50px auto 0; }
   .options__item {
+    position: relative;
     width: 200px;
     height: 200px;
-    position: relative;
     margin: 0 auto 50px;
     display: block;
-    stroke: var(--color);
+    font-size: 16px;
     stroke-width: 3.175;
     background: none;
     border: none;
-    cursor: pointer;
-    font-size: 14px;
-    transition: stroke .3s ease-in; }
-    .options__item:hover {
-      stroke: var(--x); }
+    cursor: pointer; }
 
 .see-code {
   position: absolute;
-  bottom: 10px;
+  height: 30px;
+  bottom: 0px;
   left: 0;
   width: 200px;
   z-index: 1;
@@ -467,14 +495,14 @@ body {
   outline: none;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center; }
   .see-code:link {
-    color: var(--dark-grey); }
+    color: var(--color); }
   .see-code:visited {
-    color: var(--dark-grey); }
+    color: var(--color); }
   .see-code:hover {
-    color: var(--see-code); }
+    color: var(--x); }
   .see-code:active {
     color: var(--code); }
   .see-code:focus {

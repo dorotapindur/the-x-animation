@@ -1,8 +1,8 @@
-import * as snakeSnippet from 'js_modules/_snake-snippet.js';
-import * as slideSnippet from 'js_modules/_slide-snippet.js';
-import * as angleSnippet from 'js_modules/_angle-snippet.js';
-import * as verticalSnippet from 'js_modules/_vertical-snippet.js';
-import * as horizontalSnippet from 'js_modules/_horizontal-snippet.js';
+import * as snakeSnippet from './js_modules/snake-snippet.js';
+import * as slideSnippet from './js_modules/slide-snippet.js';
+import * as angleSnippet from './js_modules/angle-snippet.js';
+import * as verticalSnippet from './js_modules/vertical-snippet.js';
+import * as horizontalSnippet from './js_modules/horizontal-snippet.js';
 
 
 const button = document.querySelector('.button--js');

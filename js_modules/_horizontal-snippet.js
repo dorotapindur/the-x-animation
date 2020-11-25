@@ -1,5 +1,3 @@
-export function horizontalSnippet() {
-
     let codeSource;
     
     const horizontalCodeButton = document.querySelector('.horizontal__code-button--js');
@@ -63,4 +61,3 @@ horizontal.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-}

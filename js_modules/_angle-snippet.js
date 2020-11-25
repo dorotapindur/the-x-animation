@@ -1,5 +1,3 @@
-export function angleSnippet() {
-    
     const angleCodeButton = document.querySelector('.angle__code-button--js');
     const htmlCodeSnippet = document.querySelector('.html-code--js');
     const scssCodeSnippet = document.querySelector('.scss-code--js');
@@ -76,4 +74,3 @@ angle.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-}

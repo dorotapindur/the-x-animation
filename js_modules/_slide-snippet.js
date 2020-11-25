@@ -1,5 +1,3 @@
-export function slideSnippet() {
-
     let codeSource;
     
     const slideCodeButton = document.querySelector('.slide__code-button--js');
@@ -75,4 +73,3 @@ slide.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-}

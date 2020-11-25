@@ -1,5 +1,3 @@
-export function snakeSnippet() {
-
 let codeSource;
 const snake = document.querySelector('.snake--js');
 const snakeCodeButton = document.querySelector('.snake__code-button--js');
@@ -74,9 +72,4 @@ snake.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-}
-export function hello() {
-    const greeting = "hello, it's me!";
-    console.log(greeting);
 
-}

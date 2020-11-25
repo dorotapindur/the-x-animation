@@ -1,5 +1,3 @@
-export function verticalSnippet() {
-
     let codeSource;
     
     const verticalCodeButton = document.querySelector('.vertical__code-button--js');
@@ -63,4 +61,3 @@ vertical.addEventListener('click', () => {
 })`;
     codeContainer.classList.add('code-container--opened');
 })
-}

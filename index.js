@@ -1,11 +1,9 @@
-import {hello} from './js_modules/_snake-snippet.js';
-import {snakeSnippet} from './js_modules/_snake-snippet.js';
-import {slideSnippet} from './js_modules/_slide-snippet.js';
-import {angleSnippet} from './js_modules/_angle-snippet.js';
-import {verticalSnippet} from './js_modules/_vertical-snippet.js';
-import {horizontalSnippet} from './js_modules/_horizontal-snippet.js';
+import * as snakeSnippet from './js_modules/_snake-snippet.js';
+import * as slideSnippet from './js_modules/_slide-snippet.js';
+import * as angleSnippet from './js_modules/_angle-snippet.js';
+import * as verticalSnippet from './js_modules/_vertical-snippet.js';
+import * as horizontalSnippet from './js_modules/_horizontal-snippet.js';
 
-hello();
 
 const button = document.querySelector('.button--js');
 const options = document.querySelector('.options--js');
@@ -40,11 +38,11 @@ slide.addEventListener('click', () => {
     slide.classList.toggle('closed');
 })
 
-snakeSnippet();
-slideSnippet();
-angleSnippet();
-verticalSnippet();
-horizontalSnippet();
+snakeSnippet;
+slideSnippet;
+angleSnippet;
+verticalSnippet;
+horizontalSnippet;
 
 close.addEventListener('click', () => {
     codeContainer.classList.remove('code-container--opened');

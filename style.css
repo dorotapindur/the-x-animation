@@ -360,7 +360,7 @@ html {
   --color: #181818;
   --x: #718500;
   --code:  #cff300;
-  --grey: #c7c7c7;
+  --grey: #a3a3a3;
   --dark-grey:  #505050;
   --front: rotateX(-180deg);
   --back: rotateX(0deg);
@@ -469,7 +469,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    margin: 50px auto 0; }
+    margin: 50px auto 0;
+    list-style-type: none; }
   .options__item {
     position: relative;
     width: 200px;

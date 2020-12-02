@@ -259,7 +259,7 @@
   transition: max-height 0.8s cubic-bezier(0.25, 0.01, 0.21, 1), box-shadow 0.8s cubic-bezier(0.25, 0.01, 0.21, 1), padding 0.8s cubic-bezier(0.25, 0.01, 0.21, 1);
   height: auto;
   max-height: 0px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   padding: 0;
   border-radius: 10px;
   box-shadow: inset 0 0 0px var(--grey);
@@ -406,6 +406,9 @@ body {
   background: none;
   border: none;
   position: relative; }
+  @media screen and (max-height: 600px) {
+    .button {
+      margin: 0 auto; } }
   .button:focus {
     outline: none; }
   .button:focus-visible {
@@ -472,6 +475,9 @@ body {
     margin: 50px auto 0;
     padding: 0;
     list-style-type: none; }
+    @media screen and (max-height: 600px) {
+      .options__x-box {
+        margin: 20px auto; } }
   .options__item {
     position: relative;
     width: 200px;
@@ -483,6 +489,9 @@ body {
     background: none;
     border: none;
     cursor: pointer; }
+    @media screen and (max-height: 600px) {
+      .options__item {
+        margin: 0 auto 20px; } }
 
 .see-code {
   position: absolute;

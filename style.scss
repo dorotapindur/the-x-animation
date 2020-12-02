@@ -71,6 +71,9 @@ body {
     background: none;
     border: none;
     position: relative;
+    @media screen and (max-height: 600px) {
+        margin: 0 auto;
+    }
     &:focus {
         outline: none;
     }
@@ -144,6 +147,9 @@ body {
         margin: 50px auto 0;
         padding: 0;
         list-style-type: none;
+        @media screen and (max-height: 600px) {
+            margin: 20px auto;
+        }
     }
     &__item {
         position: relative;
@@ -156,6 +162,9 @@ body {
         background: none;
         border: none;
         cursor: pointer;
+        @media screen and (max-height: 600px) {
+            margin: 0 auto 20px;
+        }
     }
 }
 .see-code {

@@ -48,7 +48,9 @@
   height: 200px;
   position: relative;
   stroke: var(--color);
-  transition: stroke .3s ease-in; }
+  transition: stroke .3s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
   .vertical:hover {
     stroke: var(--x); }
   .vertical::before {
@@ -85,7 +87,9 @@
   height: 200px;
   position: relative;
   stroke: var(--color);
-  transition: stroke .3s ease-in; }
+  transition: stroke .3s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
   .horizontal:hover {
     stroke: var(--x); }
   .horizontal::before {

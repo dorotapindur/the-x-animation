@@ -5,6 +5,8 @@
     position: relative;
     stroke: var(--color);
     transition: stroke .3s ease-in;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     &:hover {
         stroke: var(--x);
     }    

@@ -3,13 +3,16 @@ export * from './js_modules/slide-snippet.js';
 export * from './js_modules/angle-snippet.js';
 export * from './js_modules/vertical-snippet.js';
 export * from './js_modules/horizontal-snippet.js';
+export * from './js_modules/mode.js';
 
 import * as snakeSnippet from './js_modules/snake-snippet.js';
 import * as slideSnippet from './js_modules/slide-snippet.js';
 import * as angleSnippet from './js_modules/angle-snippet.js';
 import * as verticalSnippet from './js_modules/vertical-snippet.js';
 import * as horizontalSnippet from './js_modules/horizontal-snippet.js';
+import * as mode from './js_modules/mode.js';
 
+mode;
 
 const button = document.querySelector('.button--js');
 const options = document.querySelector('.options--js');

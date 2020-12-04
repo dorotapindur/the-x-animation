@@ -23,7 +23,8 @@ html {
     --x: #718500;
     --code:  #cff300;
     --grey: #a3a3a3;
-    --dark-grey:  #505050;
+    --dark-grey: #505050;
+    --console: #181818;
     --front: rotateX(-180deg);
     --back: rotateX(0deg);
     --transform-front: rotateX(0deg);
@@ -51,6 +52,7 @@ body {
             display: inline-block;
             animation: rotating-x 3s linear infinite;
             font-size: 40px;
+            cursor: pointer;
         }
     }
     &__description {

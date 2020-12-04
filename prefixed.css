@@ -369,7 +369,7 @@
     top: 10px;
     left: calc(100% - 74px);
     cursor: pointer;
-    background: var(--dark-grey);
+    background: var(--grey);
     color: var(--console);
     border-radius: 7px;
     z-index: 3;

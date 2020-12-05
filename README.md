@@ -1,5 +1,5 @@
 # the-x-animation
-![animation-logo](animation.png)
+![animation-logo](x-og.png)
 ## SVG animation study
 
 Inspired by article [The 🍔 menu
